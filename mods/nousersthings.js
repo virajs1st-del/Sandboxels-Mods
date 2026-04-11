@@ -3580,7 +3580,7 @@ elements.silica_gel = {
 }
 if (!eLists.UNMOVABLE){eLists.UNMOVABLE = [];}
 eLists.UNMOVABLE.push("false_vacuum", "anchor")
-runAfterLoad(() => {
+runAfterAutogen(() => {
     const newList = []
     console.log(eLists.UNMOVABLE)
     for (let _element in eLists.UNMOVABLE){
