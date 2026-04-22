@@ -3637,6 +3637,9 @@ elements.instant_wire = {
                 if (elements[spreadPixel.element].iConduct && pixel.lastUpdate > spreadPixel.lastUpdate){
                     elements[spreadPixel.element].iCharge(spreadPixel, pixel)
                 }
+                if (elements[spreadPixel.element].conduct && !spreadPixel.chargeCD && !spreadPixel.charge){
+                    chargePixel(spreadPixel)
+                }
             }
         }
     },
