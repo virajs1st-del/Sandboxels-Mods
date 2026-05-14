@@ -3771,7 +3771,7 @@ elements.iswitch = {
         }
     },
     iCharge: function(pixel, otherPixel){
-        if (pixel.dir[0] != 0 || pixel.dir[1] != 0){
+        if (pixel.dir[0] == 0 && pixel.dir[1] == 0){
             pixel.dir = [otherPixel.x-pixel.x, otherPixel.y-pixel.y]
         }
         if (otherPixel.x-pixel.x == pixel.dir[0] && otherPixel.y-pixel.y == pixel.dir[1]){pixel.iCharge = pixel.iCharge == 1 ? 0 : 1} 
