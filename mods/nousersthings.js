@@ -2309,7 +2309,7 @@ elements.specific_ray_emitter = {
         ans4 = parseInt(ans4)
         let ans5 = await _nousersthingslistprompt("Angle?", ["Default behavior", "Custom number"])
         if (ans5 == "Custom number"){
-            ans5 = parseFloat(await _nousersthingsprompt("What should the angle be?", 0))*(Math.PI/180)
+            ans5 = parseFloat(await _nousersthingsprompt("What should the angle be?", 0))*(Math.PI/180)+Math.PI
         } else ans5 = null
         let ans6 = await _nousersthingslistprompt("Would you like the beam to terminate upon hitting a specific element?", ["Yes", "No"])
         if (ans6 == "Yes"){
