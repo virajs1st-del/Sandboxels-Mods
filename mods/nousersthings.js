@@ -4016,7 +4016,7 @@ elements.instant_wire_junction = {
     renderer: function(pixel, ctx){
         let _rgb = getPixelColor(pixel.color);
         let _hsv = RGBtoHSV(parseInt(_rgb[0]), parseInt(_rgb[1]), parseInt(_rgb[2]))
-        _hsv.v = _hsv.v*((Math.max(pixel.iCharge, 0)/9)*0.6+0.4)
+        _hsv.v = _hsv.v*((Math.max(pixel.iCharge, 0)/10)*0.6+0.4)
         let _rgb2 = HSVtoRGB(_hsv.h, _hsv.s, _hsv.v)
         let _hex = RGBToHex([Math.floor(_rgb2.r), Math.floor(_rgb2.g), Math.floor(_rgb2.b)])
         drawSquare(ctx, _hex, pixel.x, pixel.y)
