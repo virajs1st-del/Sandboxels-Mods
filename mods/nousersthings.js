@@ -2280,12 +2280,6 @@ elements.ray = {
         }
     }
 }
-var specificRayStart = 0
-var specificRayEnd = 20
-var specificRayAngle = 0
-var stopAtElement = "wall"
-var rayLife = 10
-var rainbowMode = "no"
 elements.specific_ray_emitter = {
     color: "#e73e63",
     behavior: behaviors.WALL,
@@ -2317,7 +2311,7 @@ elements.specific_ray_emitter = {
         } else {ans6 = null}
         let ans7
         if (ans1 == "ray"){
-            ans7 = parseInt(_nousersthingsprompt("How long should the ray stay on screen, in ticks?", 10))
+            ans7 = parseInt(await _nousersthingsprompt("How long should the ray stay on screen, in ticks?", 10))
         }
         currentElementProp = {
             emit: ans1,
