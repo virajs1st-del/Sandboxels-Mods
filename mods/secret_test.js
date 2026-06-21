@@ -8,12 +8,12 @@ function logHistory() {
 }
 
 window.addEventListener("load", () => {
-    gameCanvas.addEventListener("mouseup", () => {
+    gameCanvas.addEventListener("mousedown", () => {
         logHistory();
-        console.log(".");
+        // console.log(".");
     })
-    gameCanvas.addEventListener("touchend", () => {
+    gameCanvas.addEventListener("touchstart", () => {
         logHistory();
-        console.log(".");
+        // console.log(".");
     })
 })
